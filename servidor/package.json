@@ -1,0 +1,13 @@
+{
+    "name": "servidor",
+    "version": "1.0.0",
+    "description": "Servidor para comunicação com o front-end da aplicação de vendas",
+    "main": "index.js",
+    "scripts": {},
+    "keywords": [],
+    "author": "Gabriel Henrique Antonelli Lanzarini",
+    "license": "MIT",
+    "devDependencies": {
+        "nodemon": "^2.0.21"
+    }
+}
