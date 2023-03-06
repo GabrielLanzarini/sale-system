@@ -5,4 +5,4 @@ const routes = Router()
 
 // routes.post("/userCreate", new UserCreate().create)
 
-module.exports = routes
+export default routes
