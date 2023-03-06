@@ -6,13 +6,15 @@ import { Request } from "./model/Request"
 import { User_account } from "./model/User/User_account"
 import { User_info } from "./model/User/User_info"
 
+const teste = process.env.DB_DOOR as number | unknown
+
 export const AppDataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
-    port: 5432,
-    username: "postgres",
-    password: "Henriquegabriel1",
-    database: "sale_system",
+    host: process.env.HOST,
+    port: teste,
+    username: process.env.USER,
+    password: process.env.PASS,
+    database: process.env.DATA,
     entities: [
         Adm_account,
         User_account,
