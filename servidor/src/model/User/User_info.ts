@@ -7,21 +7,21 @@ import {
 } from "typeorm"
 import { User_account } from "./User_account"
 
-@Entity("User_infos")
+@Entity("user_infos")
 export class User_info {
     @PrimaryGeneratedColumn("uuid")
-    id: String
+    id: string
 
     @Column("text")
-    name: String
+    name: string
 
     @Column("text")
-    last_name: String
+    last_name: string
 
     @Column("text")
-    cpf: String
+    cpf: string
 
     @OneToOne(() => User_account)
     @JoinColumn({ name: "user_id" })
-    User_account: User_account
+    user_account: User_account
 }

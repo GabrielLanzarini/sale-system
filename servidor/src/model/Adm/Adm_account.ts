@@ -1,13 +1,13 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 
-@Entity("Adm_accounts")
+@Entity("adm_accounts")
 export class Adm_account {
     @PrimaryGeneratedColumn("uuid")
-    id: String
+    id: string
 
     @Column("text")
-    username: String
+    username: string
 
     @Column("text")
-    password: String
+    password: string
 }

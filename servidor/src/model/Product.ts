@@ -10,22 +10,22 @@ import { Adm_account } from "./Adm/Adm_account"
 @Entity("products")
 export class Product {
     @PrimaryGeneratedColumn("uuid")
-    id: String
+    id: string
 
     @Column("text")
-    name: String
+    name: string
 
     @Column("text")
-    description: String
+    description: string
 
     @Column("text")
-    photo: String
+    photo: number
 
     @Column("real")
-    amount: Number
+    amount: number
 
     @Column("real")
-    value: Number
+    value: number
 
     @Column("date")
     created_at: Date

@@ -12,16 +12,16 @@ import { User_account } from "./User/User_account"
 @Entity("requests")
 export class Request {
     @PrimaryGeneratedColumn("uuid")
-    id: String
+    id: string
 
     @Column("date")
     sale_date: Date
 
     @OneToOne(() => Product)
     @JoinColumn({ name: "product_id" })
-    Product: Product
+    product: Product
 
     @OneToOne(() => User_account)
     @JoinColumn({ name: "user_id" })
-    User_account: User_account
+    user_account: User_account
 }
