@@ -1,8 +1,9 @@
 import {
     Column,
+    CreateDateColumn,
     Entity,
     JoinColumn,
-    OneToOne,
+    ManyToOne,
     PrimaryGeneratedColumn,
 } from "typeorm"
 import { Adm_account } from "./Adm/Adm_account"
@@ -27,10 +28,10 @@ export class Product {
     @Column("real")
     value: number
 
-    @Column("date")
+    @CreateDateColumn()
     created_at: Date
 
-    @OneToOne(() => Adm_account)
+    @ManyToOne(() => Adm_account)
     @JoinColumn({ name: "adm_id" })
-    adm_account_id: Adm_account
+    adm_account: Adm_account
 }

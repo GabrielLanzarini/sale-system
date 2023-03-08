@@ -7,8 +7,7 @@ import { Request } from "./model/Request"
 import { User_account } from "./model/User/User_account"
 import { User_info } from "./model/User/User_info"
 
-import { default1678227712946 as migration } from "../src/migrations/1678227712946-default"
-
+import { default1678295136054 as migration } from "../src/migrations/1678295136054-default"
 
 dotenv.config()
 const port = process.env.DB_DOOR as number | undefined
@@ -20,12 +19,6 @@ export const AppDataSource = new DataSource({
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_DATA,
-    entities: [
-        Adm_account,
-        User_account,
-        User_info,
-        Product,
-        Request,
-    ],
-    migrations: [migration]
+    entities: [Adm_account, User_account, User_info, Product, Request],
+    migrations: [migration],
 })

@@ -9,6 +9,7 @@ export class AdmCreate {
                 password:
                     "$2b$12$euzOOwkgx9OthZkg/PniAeaI6mbRFT2FL9Sf6zb2E58ZOYex6MPQG",
             })
+
             await adm_accountRepository.save(adm)
 
             res.status(200).json({

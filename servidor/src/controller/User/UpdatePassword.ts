@@ -1,21 +1,18 @@
 import { Request, Response } from "express"
 import bcrypt from "bcrypt"
-import jwt from "jsonwebtoken"
 import { AppDataSource } from "../../data-source"
-import { adm_accountRepository } from "../../repos/Adm_accountRepository copy"
-import { Adm_account } from "../../model/Adm/Adm_account"
+import { user_accountRepository } from "../../repos/User_accountRepository"
+import { User_account } from "../../model/User/User_account"
 
-const secret = process.env.SECRET as string
-
-export class AdmUpdatePass {
+export class UserUpdatePass {
     async update(req: Request, res: Response) {
         try {
             const { id } = req.params
             const { password, newPassword } = req.body
 
-            const adm = await adm_accountRepository.findOneByOrFail({ id })
+            const user = await user_accountRepository.findOneByOrFail({ id })
 
-            const passCompare = await bcrypt.compare(password, adm.password)
+            const passCompare = await bcrypt.compare(password, user.password)
 
             if (!passCompare)
                 return res.status(401).json({ message: "Senha incorreta" })
@@ -24,7 +21,7 @@ export class AdmUpdatePass {
             const newPasswordHash = await bcrypt.hash(newPassword, salt)
 
             await AppDataSource.createQueryBuilder()
-                .update(Adm_account)
+                .update(User_account)
                 .set({ password: newPasswordHash })
                 .where({ id })
                 .execute()
