@@ -14,6 +14,8 @@ export class UserRequests {
 
             const requests = await requestRepository.findBy({ user_account })
 
+
+
             if (!requests)
                 return res
                     .status(404)

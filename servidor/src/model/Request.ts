@@ -2,7 +2,6 @@ import {
     CreateDateColumn,
     Entity,
     JoinColumn,
-    ManyToMany,
     ManyToOne,
     PrimaryGeneratedColumn,
 } from "typeorm"
@@ -17,11 +16,11 @@ export class Request {
     @CreateDateColumn()
     sale_date: Date
 
-    @ManyToMany(() => Product)
+    @ManyToOne(() => Product)
     @JoinColumn({ name: "product_id" })
     product: Product
 
-    @ManyToMany(() => User_account)
+    @ManyToOne(() => User_account)
     @JoinColumn({ name: "user_id" })
     user_account: User_account
 }
