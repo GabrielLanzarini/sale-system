@@ -1,9 +1,9 @@
 import {
-    Column,
+    CreateDateColumn,
     Entity,
     JoinColumn,
     ManyToMany,
-    OneToOne,
+    ManyToOne,
     PrimaryGeneratedColumn,
 } from "typeorm"
 import { Product } from "./Product"
@@ -14,14 +14,14 @@ export class Request {
     @PrimaryGeneratedColumn("uuid")
     id: string
 
-    @Column("date")
+    @CreateDateColumn()
     sale_date: Date
 
-    @OneToOne(() => Product)
+    @ManyToMany(() => Product)
     @JoinColumn({ name: "product_id" })
     product: Product
 
-    @OneToOne(() => User_account)
+    @ManyToMany(() => User_account)
     @JoinColumn({ name: "user_id" })
     user_account: User_account
 }
