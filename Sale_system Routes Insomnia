@@ -1,0 +1,485 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2023-03-09T19:29:28.289Z",
+    "__export_source": "insomnia.desktop.app:v2022.7.5",
+    "resources": [
+        {
+            "_id": "req_a75df6bdcb484c3ab768a066cc046667",
+            "parentId": "fld_a088efb24fc34dd8a367a1768e087997",
+            "modified": 1678388466466,
+            "created": 1678388466466,
+            "url": "{{ _.url }}/product/create",
+            "name": "Create Product",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\": \"Iphone X\",\n\t\"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\",\n\t\"photo\": \"./assets/photos\",\n\t\"amount\": 500,\n\t\"value\": 10.000\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1678293004983,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_a088efb24fc34dd8a367a1768e087997",
+            "parentId": "wrk_99579e253f7c496ba1673155e96d88c3",
+            "modified": 1678388466464,
+            "created": 1678388466464,
+            "name": "Produto",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1678292999475,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_99579e253f7c496ba1673155e96d88c3",
+            "parentId": null,
+            "modified": 1678388466402,
+            "created": 1678388466402,
+            "name": "salesTests",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_99b3b854caa54f948514653af541398a",
+            "parentId": "fld_a088efb24fc34dd8a367a1768e087997",
+            "modified": 1678388466469,
+            "created": 1678388466469,
+            "url": "{{ _.url }}/product/sell/4744b249-1397-4ad3-80d2-f3f2d910e163",
+            "name": "Sell Product ",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"amount\": 40\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1678292991911.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_cabdf88e9d104dfa95b67f728495918b",
+            "parentId": "fld_a088efb24fc34dd8a367a1768e087997",
+            "modified": 1678388466472,
+            "created": 1678388466472,
+            "url": "{{ _.url }}/products",
+            "name": "List Products",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1678292991861.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_69f876fd79dc4aa2bfc308230a318377",
+            "parentId": "fld_acdae122335f46128bb45a7620318615",
+            "modified": 1678388466454,
+            "created": 1678388466454,
+            "url": "{{ _.url }}/adm/create",
+            "name": "Adm Create",
+            "description": "",
+            "method": "POST",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1678292978840,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_acdae122335f46128bb45a7620318615",
+            "parentId": "wrk_99579e253f7c496ba1673155e96d88c3",
+            "modified": 1678388466444,
+            "created": 1678388466444,
+            "name": "Adm",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1678292977492,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_f3658f7c9a5e46478e48516503d48ec5",
+            "parentId": "fld_acdae122335f46128bb45a7620318615",
+            "modified": 1678388466446,
+            "created": 1678388466446,
+            "url": "{{ _.url }}/adm/login",
+            "name": "Adm Login",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"username\": \"gabriel\",\n\t\"password\": \"12345\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1678292978815,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_0b738334f0fa4a29846d69b01ef7af38",
+            "parentId": "fld_acdae122335f46128bb45a7620318615",
+            "modified": 1678388466450,
+            "created": 1678388466450,
+            "url": "{{ _.url }}/adm/updatePass",
+            "name": "Adm Update Password",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"password\": \"gabriel\",\n\t\"newPassword\": \"gabriel\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1678292978765,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d8a08df2a8a84af88bac7efc6b610fb2",
+            "parentId": "fld_acdae122335f46128bb45a7620318615",
+            "modified": 1678388466458,
+            "created": 1678388466458,
+            "url": "{{ _.url }}/adm/updateUser",
+            "name": "Adm Update Username",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"username\": \"gabriel\",\n\t\"password\": \"12345\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1678292972767,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d80f3ea041974390a75fffb790093d71",
+            "parentId": "fld_0b7f5429367a497a9f7cc158b446d579",
+            "modified": 1678388466427,
+            "created": 1678388466427,
+            "url": "{{ _.url }}/user/create",
+            "name": "User Create",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\": \"Gabriel\",\n\t\"last_name\": \"Lanzarini\",\n\t\"cpf\": \"05235875974\",\n\t\"username\": \"ghl20\",\n\t\"password\": \"213120472\",\n\t\"email\": \"gabriel.lanzarini@hotmail.com\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1678292966769,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_0b7f5429367a497a9f7cc158b446d579",
+            "parentId": "wrk_99579e253f7c496ba1673155e96d88c3",
+            "modified": 1678388466425,
+            "created": 1678388466425,
+            "name": "User",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1678292959313,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_22d9f194496144cca691e984e06a3cfe",
+            "parentId": "fld_0b7f5429367a497a9f7cc158b446d579",
+            "modified": 1678389776653,
+            "created": 1678388466432,
+            "url": "{{ _.url }}/user/login",
+            "name": "User login",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"username\": \"ghl20\",\n\t\"password\": \"12345\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1678292966719,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_2907ff7b51964c6a9f437604b3f6dfa9",
+            "parentId": "fld_0b7f5429367a497a9f7cc158b446d579",
+            "modified": 1678388466439,
+            "created": 1678388466439,
+            "url": "{{ _.url }}/user/requests",
+            "name": "Listar Pedidos",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1678292966694,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_efca19f6b1f64fe59d6b57a9793a218a",
+            "parentId": "fld_0b7f5429367a497a9f7cc158b446d579",
+            "modified": 1678389784165,
+            "created": 1678389781026,
+            "url": "{{ _.url }}/user/infos",
+            "name": "Listar Infos",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1678292966681.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_c19a0bcae5c74509bab7348f9d946a32",
+            "parentId": "fld_0b7f5429367a497a9f7cc158b446d579",
+            "modified": 1678388466437,
+            "created": 1678388466437,
+            "url": "{{ _.url }}/user/updatePass",
+            "name": "User Update Password",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"password\": \"12345\",\n\t\"newPassword\": \"12345\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1678292966669,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_454e2edaa4c94564b57f34d43d7a5ec2",
+            "parentId": "wrk_99579e253f7c496ba1673155e96d88c3",
+            "modified": 1678388466477,
+            "created": 1678388466477,
+            "url": "{{ _.url }}/logout",
+            "name": "Logout",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1677747276331.25,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_008e70ff25814329acc551560d237f1f",
+            "parentId": "wrk_99579e253f7c496ba1673155e96d88c3",
+            "modified": 1678388466406,
+            "created": 1678388466406,
+            "name": "Base Environment",
+            "data": {
+                "url": "http://localhost:4000"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "url"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1676641183591,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_d80516c1e91048d7a6d7400706764ab7",
+            "parentId": "wrk_99579e253f7c496ba1673155e96d88c3",
+            "modified": 1678389790064,
+            "created": 1678388466415,
+            "name": "Default Jar",
+            "cookies": [
+                {
+                    "key": "x-acess-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQxNWI4YmFhLWMyNGEtNDI0Yi1iOTQ5LTM2YTViZjUzZDRmZSIsImlhdCI6MTY3ODM4OTc5MCwiZXhwIjoxNjc4NDY5NzkwfQ.UK1kSvVx9IMD_TgK6s-2pc6lK52NLvYJ635ywPf4SIo",
+                    "domain": "localhost",
+                    "path": "/",
+                    "hostOnly": true,
+                    "creation": "2023-03-08T13:33:20.923Z",
+                    "lastAccessed": "2023-03-09T19:23:10.064Z",
+                    "id": "9331036698406203"
+                }
+            ],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_1ec80e01610b44cb86b8036262eb8c9e",
+            "parentId": "wrk_99579e253f7c496ba1673155e96d88c3",
+            "modified": 1678388466484,
+            "created": 1678388466421,
+            "fileName": "salesTests",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        },
+        {
+            "_id": "env_36cf538d101b45fd89d3858d12fbd79d",
+            "parentId": "env_008e70ff25814329acc551560d237f1f",
+            "modified": 1678388466408,
+            "created": 1678388466408,
+            "name": "Url",
+            "data": {
+                "url": "http://localhost:3000"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "url"
+                ]
+            },
+            "color": "#8361c2",
+            "isPrivate": false,
+            "metaSortKey": 1676641217649,
+            "_type": "environment"
+        }
+    ]
+}

@@ -8,6 +8,7 @@ import { ProductCreate } from "./controller/Products/Create"
 import { ProductList } from "./controller/Products/List"
 import { ProductSell } from "./controller/Products/Sell"
 import { UserCreate } from "./controller/User/Create"
+import { UserInfos } from "./controller/User/ListInfos"
 import { UserRequests } from "./controller/User/ListRequests"
 import { UserLogin } from "./controller/User/Login"
 import { UserUpdatePass } from "./controller/User/UpdatePassword"
@@ -35,6 +36,7 @@ routes.put(
     new UserUpdatePass().update
 )
 routes.get("/user/requests", new JwtVerify().verify, new UserRequests().list)
+routes.get("/user/infos", new JwtVerify().verify, new UserInfos().list)
 
 routes.post(
     "/product/create",
