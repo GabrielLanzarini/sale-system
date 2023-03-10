@@ -5,9 +5,11 @@ import { AdmUpdatePass } from "./controller/Adm/UpdatePassword"
 import { AdmUpdateUsername } from "./controller/Adm/UpdateUsername"
 import { Logout } from "./controller/Logout"
 import { ProductCreate } from "./controller/Products/Create"
+import { ProductDelete } from "./controller/Products/Delete"
 import { ProductList } from "./controller/Products/List"
 import { ProductSell } from "./controller/Products/Sell"
 import { UserCreate } from "./controller/User/Create"
+import { UserDelete } from "./controller/User/Delete"
 import { UserInfos } from "./controller/User/ListInfos"
 import { UserRequests } from "./controller/User/ListRequests"
 import { UserLogin } from "./controller/User/Login"
@@ -37,6 +39,7 @@ routes.put(
 )
 routes.get("/user/requests", new JwtVerify().verify, new UserRequests().list)
 routes.get("/user/infos", new JwtVerify().verify, new UserInfos().list)
+routes.delete("/user/delete", new JwtVerify().verify, new UserDelete().delete)
 
 routes.post(
     "/product/create",
@@ -49,6 +52,7 @@ routes.put(
     new ProductSell().update
 )
 routes.get("/products", new ProductList().list)
+routes.delete("/products/delete/:id", new ProductDelete().delete)
 
 routes.delete("/logout", new Logout().logout)
 

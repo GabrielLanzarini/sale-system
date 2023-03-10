@@ -10,14 +10,16 @@
 [X] - LOGIN
 [X] - UPDATE SENHA
 [X] - LISTAR INFOS
-[] - DELETE
-[] - LISTAR PEDIDOS
+[X] - DELETE
+[X] - LISTAR PEDIDOS
 
 ------------ PRODUTOS ------------
 [X] - CRIAÇAO
 [X] - LISTAGEM
 [X] - VENDA
-[] - DELETAR
+[X] - DELETAR
+
+ARRUAMAR A CONFIGURAÇÃO DA DATA
 
 ------------ GERAL ------------
 [X] - LOGOUT

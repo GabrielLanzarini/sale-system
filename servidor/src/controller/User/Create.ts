@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 import { user_accountRepository } from "../../repos/User_accountRepository"
 import { user_infoRepository } from "../../repos/User_infoRepository"
-import bcrypt, { genSalt } from "bcrypt"
+import bcrypt from "bcrypt"
 
 export class UserCreate {
     async create(req: Request, res: Response) {

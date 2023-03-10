@@ -7,7 +7,7 @@ import { Request } from "./model/Request"
 import { User_account } from "./model/User/User_account"
 import { User_info } from "./model/User/User_info"
 
-import { default1678299059621 as migration } from "../src/migrations/1678299059621-default"
+import { default1678448566391 as migration } from "../src/migrations/1678448566391-default"
 
 dotenv.config()
 const port = process.env.DB_DOOR as number | undefined
