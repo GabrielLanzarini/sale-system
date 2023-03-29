@@ -11,16 +11,23 @@ export class ProductSell {
             const { product_id, id } = req.params
             const { amount } = req.body
 
-            const product = await productRepository.findOneByOrFail({
+            const product = await productRepository.findOneBy({
                 id: product_id,
             })
+
+            if (!product)
+                return res.status(404).json({ message: "O produto não foi encontrado!" })
 
             const user_account = await user_accountRepository.findOneByOrFail({
                 id,
             })
 
             const request = requestRepository.create({
-                product,
+                amount: amount,
+                photo: product.photo,
+                value: product.value,
+                product_name: product.product_name,
+                product_id: product.id,
                 user_account,
             })
 
@@ -28,13 +35,13 @@ export class ProductSell {
 
             await AppDataSource.createQueryBuilder()
                 .update(Product)
-                .set({ amount: product.amount - +amount })
+                .set({ amount: +(product.amount) - +amount })
                 .where({ id: product.id })
                 .execute()
 
             return res
                 .status(201)
-                .json({ message: `${product.name} vendido com sucesso!` })
+                .json({ message: `${product.product_name} vendido com sucesso!` })
         } catch (err) {
             console.log(err)
 

@@ -28,8 +28,6 @@ export class UserDelete {
 
             return res.clearCookie("x-acess-token").status(204)
         } catch (err) {
-            console.log(err)
-
             return res.status(404).json({ message: "Internal error server!" })
         }
     }

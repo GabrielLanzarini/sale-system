@@ -10,7 +10,10 @@ export class AdmUpdateUsername {
             const { id } = req.params
             const { username, password } = req.body
 
-            const adm = await adm_accountRepository.findOneByOrFail({ id })
+            const adm = await adm_accountRepository.findOneBy({ id })
+
+            if (!adm)
+                return res.status(405).json({ message: "Realize o login como administrador para continuar!" })
 
             const passCompare = await bcrypt.compare(password, adm.password)
 

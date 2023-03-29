@@ -47,12 +47,12 @@ routes.post(
     new ProductCreate().create
 )
 routes.put(
-    "/product/sell/:id",
+    "/product/sell/:product_id",
     new JwtVerify().verify,
     new ProductSell().update
 )
 routes.get("/products", new ProductList().list)
-routes.delete("/products/delete/:id", new ProductDelete().delete)
+routes.delete("/products/delete/:product_id", new JwtVerify().verify, new ProductDelete().delete)
 
 routes.delete("/logout", new Logout().logout)
 

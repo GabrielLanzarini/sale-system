@@ -15,13 +15,16 @@ export class ProductDelete {
                         "Realize o login como administrador para continuar!",
                 })
 
-            const product = await productRepository.findOneByOrFail({
+            const product = await productRepository.findOneBy({
                 id: product_id,
             })
 
+            if (!product)
+                return res.status(404).json({ message: "O produto informado não existe!" })
+
             await productRepository.remove(product)
 
-            return res.status(204)
+            return res.status(204).json({ message: "Produto removido com sucesso!" })
         } catch (err) {
             return res.status(404).json({ message: "Internal error server!" })
         }

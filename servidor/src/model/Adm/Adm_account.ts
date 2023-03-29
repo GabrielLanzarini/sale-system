@@ -5,9 +5,9 @@ export class Adm_account {
     @PrimaryGeneratedColumn("uuid")
     id: string
 
-    @Column("text")
+    @Column({ type: "varchar", length: 20 })
     username: string
 
-    @Column("text")
+    @Column({ type: "varchar", length: 100 })
     password: string
 }

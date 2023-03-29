@@ -33,6 +33,8 @@ export class AdmLogin {
                 .status(200)
                 .json({ message: "Administrador logado com sucesso!" })
         } catch (err) {
+            console.log(err);
+
             return res.status(404).json({ message: "Internal Server Error!" })
         }
     }

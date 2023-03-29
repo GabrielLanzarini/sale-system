@@ -6,14 +6,17 @@ export class ProductCreate {
     async create(req: Request, res: Response) {
         try {
             const { id } = req.params
-            const { name, description, photo, amount, value } = req.body
+            const { product_name, description, photo, amount, value } = req.body
 
-            const adm_account = await adm_accountRepository.findOneByOrFail({
+            const adm_account = await adm_accountRepository.findOneBy({
                 id,
             })
 
+            if (!adm_account)
+                return res.status(405).json({ message: "Realize o login como administrador!" })
+
             const product = productRepository.create({
-                name,
+                product_name,
                 description,
                 photo,
                 amount,
@@ -25,7 +28,7 @@ export class ProductCreate {
 
             return res
                 .status(201)
-                .json({ message: `${name} adicionado com sucesso!` })
+                .json({ message: `${product_name} adicionado com sucesso!` })
         } catch (err) {
             console.log(err)
 

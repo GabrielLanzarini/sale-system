@@ -9,7 +9,7 @@ export class ProductList {
                     id: true,
                     amount: true,
                     description: true,
-                    name: true,
+                    product_name: true,
                     value: true,
                     photo: true,
                     created_at: true,

@@ -12,16 +12,16 @@ export class User_info {
     @PrimaryGeneratedColumn("uuid")
     id: string
 
-    @Column("text")
+    @Column({ type: "varchar", length: 20 })
     name: string
 
-    @Column("text")
+    @Column({ type: "varchar", length: 20 })
     last_name: string
 
-    @Column("text")
+    @Column({ type: "varchar", length: 11 })
     cpf: string
 
-    @OneToOne(() => User_account)
+    @OneToOne(() => User_account, { onDelete: "CASCADE" })
     @JoinColumn({ name: "user_id" })
     user_account: User_account
 }

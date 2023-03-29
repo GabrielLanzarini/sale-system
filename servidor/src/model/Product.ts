@@ -13,25 +13,25 @@ export class Product {
     @PrimaryGeneratedColumn("uuid")
     id: string
 
-    @Column("text")
-    name: string
+    @Column({ type: "varchar", length: 20 })
+    product_name: string
 
     @Column("text")
     description: string
 
-    @Column("text")
-    photo: number
+    @Column({ type: "varchar", length: 20 })
+    photo: string
 
-    @Column("real")
+    @Column("integer")
     amount: number
 
-    @Column("real")
+    @Column({ type: "decimal", precision: 100, scale: 2 })
     value: number
 
     @CreateDateColumn()
     created_at: Date
 
-    @ManyToOne(() => Adm_account)
+    @ManyToOne(() => Adm_account, { onDelete: "CASCADE" })
     @JoinColumn({ name: "adm_id" })
     adm_account: Adm_account
 }
