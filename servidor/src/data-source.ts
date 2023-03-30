@@ -13,12 +13,12 @@ dotenv.config()
 const port = process.env.DB_DOOR as number | undefined
 
 export const AppDataSource = new DataSource({
-    type: "postgres",
-    host: process.env.DB_HOST,
-    port: port,
-    username: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_DATA,
-    entities: [Adm_account, User_account, User_info, Product, Request],
-    migrations: [migration],
+      type: "postgres",
+      host: process.env.DB_HOST,
+      port: port,
+      username: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      database: process.env.DB_DATA,
+      entities: [Adm_account, User_account, User_info, Product, Request],
+      migrations: [migration],
 })
