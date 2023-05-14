@@ -1,0 +1,15 @@
+.ativo {
+    font-weight: bold;
+    background-color: var(--azul-padrao);
+    transition: 0.25s;
+}
+
+.inativo {
+    font-weight: bold;
+    background-color: var(--botao-inativo);
+}
+
+.ativo:hover, .ativo:focus{
+    box-shadow: var(--azul-padrao) 0px 0px 15px;
+    outline: none;
+}
