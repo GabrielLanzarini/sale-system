@@ -6,7 +6,7 @@ type propsInput = {
 
 export default function InputSTitulo(props: propsInput) {
     return (
-        <div className={`h-24 flex-col grid relative`}>
+        <div className={`h-24 w-[520px] flex-col grid relative`}>
             <input  
                 style={{backgroundColor: "var(--input-background)"}}
                 type={props.type}

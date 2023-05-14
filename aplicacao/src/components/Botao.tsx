@@ -11,7 +11,7 @@ export default function Botao(props: propsBotao) {
             <button
                 className={`${
                     props.ativo ? style.ativo : style.inativo
-                } transition-all p-5 rounded-lg w-full text-white`}
+                } transition-all  p-5 rounded-lg w-[520px] text-white`}
             >
                 {props.title}
             </button>

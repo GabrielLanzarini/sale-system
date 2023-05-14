@@ -9,7 +9,6 @@
     background-color: var(--botao-inativo);
 }
 
-.ativo:hover, .ativo:focus{
+.ativo:hover{
     box-shadow: var(--azul-padrao) 0px 0px 15px;
-    outline: none;
 }
