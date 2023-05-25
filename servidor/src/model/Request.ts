@@ -6,7 +6,7 @@ import {
     ManyToOne,
     PrimaryGeneratedColumn,
 } from "typeorm"
-import { User_account } from "./User/User_account"
+import { User_account } from "./User_account"
 
 @Entity("requests")
 export class Request {

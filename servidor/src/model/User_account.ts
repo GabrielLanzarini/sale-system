@@ -1,11 +1,19 @@
-import {
-    Column,
-    Entity,
-    JoinColumn,
-    OneToOne,
-    PrimaryGeneratedColumn,
-} from "typeorm"
-import { User_account } from "./User_account"
+import { Column, Entity, PrimaryGeneratedColumn, JoinColumn, OneToOne } from "typeorm"
+
+@Entity("user_accounts")
+export class User_account {
+    @PrimaryGeneratedColumn("uuid")
+    id: string
+
+    @Column({ type: "varchar", length: 20 })
+    username: string
+
+    @Column({ type: "varchar", length: 100 })
+    password: string
+
+    @Column({ type: "varchar", length: 40 })
+    email: string
+}
 
 @Entity("user_infos")
 export class User_info {

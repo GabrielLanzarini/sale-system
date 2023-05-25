@@ -6,7 +6,7 @@ import {
     ManyToOne,
     PrimaryGeneratedColumn,
 } from "typeorm"
-import { Adm_account } from "./Adm/Adm_account"
+import { Adm_account } from "./Adm_account"
 
 @Entity("products")
 export class Product {
