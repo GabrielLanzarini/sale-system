@@ -6,7 +6,11 @@
   --input-background: #EFF9FF;
   --text-error: #FF5454;
   --azul-padrao: #5181FF;
-  --botao-inativo: #A5A5A5;
+  --botao-inativo: #767676 ;
+}
+
+h1,h2{
+  color: #2f2f2f;
 }
 
 @font-face {
@@ -24,6 +28,7 @@
 
 input{
   outline: none;
+  color: #2f2f2f;
 }
 
 button:focus{
